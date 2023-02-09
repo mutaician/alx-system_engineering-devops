@@ -1,2 +1,2 @@
 #!/bin/bash
-$ ls -A --sort=alpha --group-directories-first --format=commas | tr '\n' ',' | sed 's/,/, /g; s/, $/\n/'
+ls -A | awk 'BEGIN {print ".,"} {printf "%s,", $0} END {print ""}' | sort | tr '\n' ','
