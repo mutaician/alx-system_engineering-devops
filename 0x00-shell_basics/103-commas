@@ -1,0 +1,2 @@
+#!/bin/bash
+$ ls -A --sort=alpha --group-directories-first --format=commas | tr '\n' ',' | sed 's/,/, /g; s/, $/\n/'
