@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -A | awk 'BEGIN {print ".,"} {printf "%s,", $0} END {print ""}' | sort | tr '\n' ','
+ls -a --format=commas --group-directories-first -p 
